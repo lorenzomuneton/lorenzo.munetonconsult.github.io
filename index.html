@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Innovation Paradox | Engineering Leadership Insights</title>
+    <meta name="description" content="Transform engineering failures into competitive advantage with research-backed strategies for executive leaders.">
+    
+    <!-- Add Google Analytics here -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script> -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: #3498db;
+            color: white;
+        }
+        
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+        
+        /* Infographic Section */
+        .infographic-section {
+            background: white;
+            text-align: center;
+        }
+        
+        .infographic-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 1000px;
+        }
+        
+        .infographic-embed {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+        }
+        
+        /* Executive Brief Section */
+        .brief-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .brief-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .brief-preview {
+            background: white;
+            color: #333;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .download-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        input[type="email"], input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .download-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .download-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        /* Implementation Guide Section */
+        .guide-section {
+            background: white;
+        }
+        
+        .guide-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .guide-content h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .guide-content h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        .guide-content ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        .guide-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .about-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 2rem auto;
+            display: block;
+            object-fit: cover;
+            border: 5px solid #3498db;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .infographic-embed {
+                height: 400px;
+            }
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-left: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Innovation Paradox</h1>
+            <p class="subtitle">Transform Engineering Failures into Competitive Advantage</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#infographic">The Data</a></li>
+                <li><a href="#brief">Executive Brief</a></li>
+                <li><a href="#guide">Implementation Guide</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="infographic" class="infographic-section">
+        <div class="container">
+            <h2 class="section-title">The Failure-Innovation Pipeline</h2>
+            <div class="infographic-container">
+                <p style="margin-bottom: 2rem; font-size: 1.2rem; color: #666;">
+                    Research from 118 high-tech companies reveals that failure normalization drives 47% higher innovation rates.
+                </p>
+                <!-- Replace this with your actual infographic embed or image -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                    [Your Infographic Will Display Here]<br>
+                    <small style="font-size: 1rem; opacity: 0.8; margin-top: 1rem; display: block;">Upload your infographic HTML file to replace this placeholder</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="brief" class="brief-section">
+        <div class="container">
+            <div class="brief-container">
+                <h2 class="section-title">Executive Brief</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+                    Get the complete business case for failure normalization with actionable implementation roadmap.
+                </p>
+                
+                <div class="brief-preview">
+                    <h3 style="color: #2c3e50; margin-bottom: 1rem;">Key Findings Include:</h3>
+                    <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+                        <li>47% higher innovation rates in failure-normalized teams</li>
+                        <li>3.2x faster product development cycles</li>
+                        <li>Psychological safety as primary success factor</li>
+                        <li>90-day implementation roadmap</li>
+                        <li>Specific ROI metrics and success indicators</li>
+                    </ul>
+                </div>
+                
+                <div class="download-form">
+                    <h3 style="margin-bottom: 1rem;">Download the Complete Executive Brief</h3>
+                    <form id="downloadForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company:</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <button type="submit" class="download-btn">
+                            Download Executive Brief
+                            <span id="loading" class="loading" style="display: none;"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="guide" class="guide-section">
+        <div class="container">
+            <h2 class="section-title">Implementation Guide</h2>
+            <div class="guide-content">
+                <!-- Your blog post content goes here -->
+                <p style="font-size: 1.2rem; color: #666; text-align: center; margin-bottom: 3rem;">
+                    <em>Your executives bought into failure normalization. Now what?</em>
+                </p>
+                
+                <h2>Phase 1: Building Psychological Safety Infrastructure</h2>
+                <p>The foundation of failure normalization starts with creating an environment where teams feel safe to admit mistakes and extract learning from setbacks...</p>
+                
+                <h3>The Manager's Playbook for Psychological Safety</h3>
+                <p><strong>Start with Self-Disclosure:</strong> Your first move isn't changing your team—it's changing yourself. Share a specific professional failure where you learned something valuable.</p>
+                
+                <!-- Continue with your full blog post content here -->
+                <!-- This is where you'll paste your complete implementation guide -->
+                
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; margin: 3rem 0; text-align: center;">
+                    <p><strong>Note:</strong> This is a truncated preview. The full implementation guide includes detailed protocols, scripts, templates, and troubleshooting guides.</p>
+                    <p style="margin-top: 1rem; color: #666;">Scroll up to download the complete executive brief for the full content.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <!-- Replace with your actual photo -->
+                <div style="width: 150px; height: 150px; background: #ddd; border-radius: 50%; margin: 0 auto 2rem auto; display: flex; align-items: center; justify-content: center; color: #666;">
+                    [Your Photo]
+                </div>
+                <h3 style="margin-bottom: 1rem;">[Your Name]</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                    Engineering leadership consultant specializing in failure normalization and team effectiveness. 
+                    This research synthesizes findings from leading academic studies and real-world implementation 
+                    across high-tech organizations.
+                </p>
+                <p>
+                    <strong>Research Foundation:</strong> Analysis of 118 high-tech companies, Google's Project Aristotle, 
+                    Stanford growth mindset studies, and engineering design iteration research.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get Started</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                Ready to transform your engineering culture? Let's discuss implementation strategies for your organization.
+            </p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: #3498db;">📧</div>
+                    <h4>Email</h4>
+                    <p>[your.email@domain.com]</p>
+                </div>
+                <div class="contact-item">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: #3498db;">💼</div>
+                    <h4>LinkedIn</h4>
+                    <p>[Your LinkedIn Profile]</p>
+                </div>
+                <div class="contact-item">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: #3498db;">📅</div>
+                    <h4>Schedule</h4>
+                    <p>[Calendly Link]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Your Name]. All rights reserved. | Research-based consulting for engineering leadership.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple form handling
+        document.getElementById('downloadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const loading = document.getElementById('loading');
+            const button = document.querySelector('.download-btn');
+            
+            loading.style.display = 'inline-block';
+            button.disabled = true;
+            
+            // Simulate download process
+            setTimeout(() => {
+                alert('Thank you! Your executive brief download will begin shortly.\n\nIn a real implementation, this would:\n- Send the form data to your email/CRM\n- Trigger the PDF download\n- Add the person to your mailing list');
+                
+                loading.style.display = 'none';
+                button.disabled = false;
+                
+                // Reset form
+                document.getElementById('downloadForm').reset();
+            }, 2000);
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
